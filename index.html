@@ -1,0 +1,67 @@
+# test<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レスポンシブカピバラ</title>
+    <style>
+        .contents{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: rgb(241, 237, 213);
+            width: 800px;
+            height: 120px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .text{
+            color: white;
+            background-color: rgb(0, 0, 0);
+            width: 800px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .input[type="text"],textarea{
+            padding: 6px;
+            width: 200px;
+            font-size: 1rem;
+        }
+        .box{
+            background-color: #00f;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .textarea{
+            height: 140px;
+        }
+       @media(max-width:767px){
+            .body{
+                background-color: #00f;
+            }
+            .contents{
+                grid-template-columns: 1fr 1fr;
+        }
+       }
+    </style>  
+</head>
+<body>
+    <div class="contents">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="text">文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー</div>
+    <center><img src="kapi.webp" alt=""></center>
+       <label for="message">お名前：</label><input type="text" name="subject">
+        <br> 返信を希望する方はチェックしてください:
+       <label><input type="checkbox" name="do"></label>
+       <br>
+       <label for="message">メッセージ</label><br>
+                <textarea name="message" id="message"></textarea>
+        <br><label ><input type="button" name="go" value="送信する"></label>
+</body>
+</html>
